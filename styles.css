@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa;
+    line-height: 1.6;
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fad02c ;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: inherit;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  header .logo h1 {
+    font-size: 24px;
+    text-align: justify;
+  }
+  
+  nav {
+    display: flex;
+    background-color: #333;
+    padding: 10px;
+    border-radius:30px;
+    
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    justify-content: flex-end;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    position:relative;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #f28d2b;
+  }
+  
+  nav ul li a.active {
+    color: #f28d2b;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 1024px) {
+    header {
+        padding: 12px 24px;
+    }
+  
+    header .logo h1 {
+        font-size: 20px;
+    }
+  
+    nav ul li a {
+        font-size: 14px; 
+    }
+  }
+  
+  @media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+  
+    header .logo h1 {
+        font-size: 18px; 
+    }
+  
+    nav ul {
+        gap: 16px; 
+    }
+  
+    nav ul li a {
+        font-size: 14px; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header {
+        padding: 8px 16px; 
+    }
+  
+    header .logo h1 {
+        font-size: 16px; 
+    }
+  
+    nav ul {
+        gap: 12px; 
+    }
+  
+    nav ul li a {
+        font-size: 12px; 
+    }
+  }  
+  .Display {
+    background-size: cover;
+    background-position: center;
+    background-color: floralwhite;
+    color: #f28d2b;
+    text-align: center;
+    padding: 50px 30px;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  
+  .Display h2 {
+    font-size: 48px;
+    padding: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .Display p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2)
+  
+}
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+  .section {
+    padding: 60px 20px;
+    background-color: white;
+    text-align: center;
+  }
+  
+  .section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 40px;
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+  
+  .card {
+    background-color: #fff;
+    border: 1px solid #e4e4e4;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 450px;
+    height: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-bottom: 1px solid #e4e4e4;
+  }
+  
+  .card .content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+  
+  .card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .card p,a{
+    font-size: 14px;
+    text-decoration: none;
+    color: #777;
+    margin-bottom: 16px;
+    flex-grow: 1;
+  }
+  
+  .card button{
+    padding: 15px 20px;
+    background-color: #f28d2b;
+    border: none;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    align-self: center;
+  }
+  
+  .card button:hover {
+    background-color: #e0741f;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 16px;
+    text-align: center;
+  }
+  
+  footer .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 16px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  footer .social-media a:hover {
+    color: #333;
+  }
+  
+  footer .contact p {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+  
